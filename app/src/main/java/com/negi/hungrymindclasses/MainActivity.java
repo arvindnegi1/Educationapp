@@ -44,7 +44,7 @@ int logo[]={R.drawable.maths,R.drawable.science,R.drawable.english,R.drawable.ph
             else{
                 fabfb.hide();
                 fabyt.hide();
-                fab.setImageResource(R.drawable.ic_share_black_24dp);
+                fab.setImageResource(R.drawable.ic_timeline_black_24dp);
                 show=0;
             }
         }
