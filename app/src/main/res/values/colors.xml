@@ -5,4 +5,10 @@
     <color name="colorAccent">#D81B60</color>
     <color name="orange">#FFA500</color>
     <color name="white">#FFFFFF</color>
+    <color name="purple">#7F00FF</color>
+    <color name="skyblue">#00BFFF</color>
+    <color name="mellow">#F8DE7E</color>
+    <color name="black">#000000</color>
+    <color name="lighterindigo">#3C6478</color>
+    <color name="snow">#FFFAFA</color>
 </resources>

@@ -1,12 +1,18 @@
-<LinearLayout android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/snow">
+    <include android:layout_height="65sp"
+        android:layout_width="match_parent"
+        layout="@layout/toolbar"
+        android:id="@+id/toptool"
+       />
 <GridView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="70sp"
+    android:layout_marginTop="60sp"
     android:numColumns="2"
     android:padding="15sp"
     android:id="@+id/subject"/>
@@ -14,9 +20,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="45sp"
+        android:layout_width="55sp"
         android:id="@+id/link"
-        android:layout_height="45sp"
+        android:layout_height="55sp"
         android:layout_gravity="end|bottom"
         android:src="@drawable/ic_share_black_24dp"
         app:fabSize="normal"
@@ -25,11 +31,11 @@
         android:elevation="10sp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        app:fabCustomSize="45sp"
+        app:fabCustomSize="55sp"
         />
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="45sp"
-        android:layout_height="45sp"
+        android:layout_width="55sp"
+        android:layout_height="55sp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="80sp"
@@ -37,11 +43,11 @@
         android:visibility="invisible"
         android:src="@drawable/facebook"
         android:id="@+id/fb"
-        app:fabCustomSize="45sp"
+        app:fabCustomSize="55sp"
         />
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="45sp"
-        android:layout_height="45sp"
+        android:layout_width="55sp"
+        android:layout_height="55sp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="150sp"
@@ -49,7 +55,7 @@
         android:id="@+id/youtube"
         android:visibility="invisible"
         android:src="@drawable/youtube"
-        app:fabCustomSize="45sp"
+        app:fabCustomSize="55sp"
         />
 </RelativeLayout>
-</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<androidx.appcompat.widget.Toolbar android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple"
+    android:id="@+id/custool"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <ImageView
+        android:layout_width="40sp"
+        android:layout_height="50sp"
+        android:src="@drawable/hungrylogo"
+        ></ImageView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="HUNGRY MIND CLASSES"
+        android:id="@+id/texttop"
+        android:textSize="22sp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/grenze"
+        android:textColor="@color/orange"></TextView>
+</androidx.appcompat.widget.Toolbar>
