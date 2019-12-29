@@ -4,15 +4,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android" >
     <include android:layout_height="65sp"
         android:layout_width="match_parent"
-        layout="@layout/toolbar2"
-        android:id="@+id/topcat"
+        layout="@layout/toolbar"
+        android:id="@+id/toptool"
         />
-    <GridView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:numColumns="2"
-        android:layout_marginTop="70sp"
-        android:id="@+id/gridclass"
-        />
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/referencelink"
+        >
+
+    </WebView>
 
 </LinearLayout>
