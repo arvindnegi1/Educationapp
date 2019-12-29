@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10sp">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="7sp"
+    app:cardBackgroundColor="@color/orange"
+    app:cardElevation="10sp">
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/images"
+        android:layout_height="140sp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/hungrylogo"
+        ></ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_gravity="bottom|center"
+        android:text="SUBJECT"
+        android:id="@+id/subtext"
+        android:textSize="22sp"
+        android:fontFamily="@font/grenze"
+        android:textColor="@color/white"/>
+</androidx.cardview.widget.CardView>
+</LinearLayout>

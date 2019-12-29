@@ -23,6 +23,7 @@ LinearLayout l2;
             @Override
             public void run() {
                 startActivity(new Intent(splashScreen.this,MainActivity.class));
+                finish();
             }
         },3000);
 
