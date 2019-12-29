@@ -35,7 +35,7 @@ int logo[]={R.drawable.nine,R.drawable.ten,R.drawable.eleven,R.drawable.twelve,R
             }
         });
         gridView=findViewById(R.id.gridclass);
-        CustomAdapter2 customAdapter2=new CustomAdapter2(getApplicationContext(),logo,text);
+        CustomAdapter2 customAdapter2=new CustomAdapter2(getApplicationContext(),logo,text,temp);
         gridView.setAdapter(customAdapter2);
     }
 }

@@ -55,7 +55,28 @@
         android:id="@+id/youtube"
         android:visibility="invisible"
         android:src="@drawable/youtube"
-        app:fabCustomSize="55sp"
-        />
-</RelativeLayout>
+        app:fabCustomSize="55sp"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="55sp"
+            android:layout_height="55sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="220sp"
+            android:layout_marginRight="10sp"
+            android:id="@+id/insta"
+            android:visibility="invisible"
+            android:src="@drawable/instagram"
+            app:fabCustomSize="55sp"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="55sp"
+            android:layout_height="55sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="300sp"
+            android:layout_marginRight="10sp"
+            android:id="@+id/tweet"
+            android:visibility="invisible"
+            android:src="@drawable/tweet"
+            app:fabCustomSize="55sp"/>
+    </RelativeLayout>
 </RelativeLayout>
