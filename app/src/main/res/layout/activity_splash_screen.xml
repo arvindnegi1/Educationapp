@@ -12,11 +12,11 @@
         android:orientation="vertical"
         android:id="@+id/lay1">
         <ImageView
-            android:layout_width="150sp"
-            android:layout_height="150sp"
+            android:layout_width="200sp"
+            android:layout_height="200sp"
             android:src="@drawable/hungrylogo"
             android:layout_gravity="center"
-            android:layout_marginTop="160sp"/>
+            android:layout_marginTop="130sp"/>
 
     </LinearLayout>
     <LinearLayout
@@ -32,7 +32,8 @@
             android:layout_marginTop="15sp"
             android:textColor="@color/orange"
             android:textAlignment="center"
-            android:textSize="28sp"
+            android:textSize="24sp"
+            android:fontFamily="@font/grenze"
 
             >
 
