@@ -41,12 +41,6 @@ String text[];
             text=new String[]{"CLASS 9","CLASS 10","CLASS 11","CLASS 12","NDA","AFCAT"};
             customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
         }
-        else if(temp.equals("PHYSICS"))
-        {
-            logo = new int[]{R.drawable.nine, R.drawable.ten, R.drawable.eleven, R.drawable.twelve, R.drawable.nda,R.drawable.force};
-            text=new String[]{"CLASS 9","CLASS 10","CLASS 11","CLASS 12","NDA","AFCAT"};
-            customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
-        }
         else if(temp.equals("NDA"))
         {
             logo = new int[]{R.drawable.maths,R.drawable.assignment};
@@ -57,12 +51,6 @@ String text[];
         {
             logo = new int[]{R.drawable.maths,R.drawable.testseries};
             text=new String[]{"MATHS","EKT"};
-            customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
-        }
-        else if(temp.equals("TEST SERIES"))
-        {
-            logo = new int[]{R.drawable.maths,R.drawable.assignment};
-            text=new String[]{"MATHS","GS"};
             customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
         }
             goback.setOnClickListener(new View.OnClickListener() {

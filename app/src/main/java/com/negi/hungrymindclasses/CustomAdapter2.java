@@ -1,7 +1,9 @@
 package com.negi.hungrymindclasses;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,18 +49,6 @@ public class CustomAdapter2 extends BaseAdapter {
                 img.setImageResource(logo[position]);
                 tv.setText(text[position]);
         final Intent intent=new Intent(mcontext,Reference.class);
-                if(course.equals("PHYSICS"))
-                {
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.putExtra("indexurl","http://hungrymindclasses.com/category/physics/");
-                    mcontext.startActivity(intent);
-                }
-                else if(course.equals("TEST SERIES"))
-                {
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.putExtra("indexurl","http://hungrymindclasses.com/category/test-series/");
-                    mcontext.startActivity(intent);
-                }
 
         LinearLayout second=convertView.findViewById(R.id.category);
         second.setOnClickListener(new View.OnClickListener() {

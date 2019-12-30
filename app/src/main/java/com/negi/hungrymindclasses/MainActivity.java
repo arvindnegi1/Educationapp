@@ -2,6 +2,10 @@ package com.negi.hungrymindclasses;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridView;
@@ -58,12 +62,29 @@ int logo[]={R.drawable.maths,R.drawable.science,R.drawable.english,R.drawable.ph
         }
         else if(v==fabfb)
         {
-            Toast.makeText(MainActivity.this,"FACEBOOK",Toast.LENGTH_SHORT).show();
-
+            Intent webintent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.facebook.com/hungrymindclass/"));
+            startActivity(webintent);
         }
         else if(v==fabyt)
         {
-            Toast.makeText(MainActivity.this,"YOUTUBE",Toast.LENGTH_SHORT).show();
+            Intent appintent=new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube/channel/UCrMgn-WIYnYLqVqtf-xl-VA/?guided_help_flow=5"));
+            Intent webintent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.youtube.com/channel/UCrMgn-WIYnYLqVqtf-xl-VA/?guided_help_flow=5"));
+            try {
+                startActivity(appintent);
+            }catch (ActivityNotFoundException ex)
+            {
+                startActivity(webintent);
+            }
+        }
+        else if(v==fabtweet)
+        {
+            Intent webintent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://twitter.com/hungrymindclass"));
+            startActivity(webintent);
+        }
+        else if(v==fabinsta)
+        {
+            Intent webintent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.instagram.com/hungrymindclass/"));
+            startActivity(webintent);
         }
 
     }

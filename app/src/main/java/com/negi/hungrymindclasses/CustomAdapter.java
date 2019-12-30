@@ -1,7 +1,9 @@
 package com.negi.hungrymindclasses;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,10 +54,40 @@ public class CustomAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(mcontext,""+text[position],Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(mcontext,Category.class);
-                intent.putExtra("cat",text[position]);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                mcontext.startActivity(intent);
+                if(text[position].equals("VIDEO LECTURE"))
+                {
+                    Intent appintent=new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube/channel/UCrMgn-WIYnYLqVqtf-xl-VA/?guided_help_flow=5"));
+                    Intent webintent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.youtube.com/channel/UCrMgn-WIYnYLqVqtf-xl-VA/?guided_help_flow=5"));
+                    appintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    webintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    try {
+                        mcontext.startActivity(appintent);
+                    }catch (ActivityNotFoundException ex)
+                    {
+                        mcontext.startActivity(webintent);
+                    }
+                }
+                else if(text[position].equals("PHYSICS"))
+                {
+                   Intent intent=new Intent(mcontext,Reference.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.putExtra("indexurl","http://hungrymindclasses.com/category/physics/");
+                    mcontext.startActivity(intent);
+                }
+                else if(text[position].equals("TEST SERIES"))
+                {
+
+                   Intent intent=new Intent(mcontext,Reference.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.putExtra("indexurl","http://hungrymindclasses.com/category/test-series/");
+                    mcontext.startActivity(intent);
+                }
+                else {
+                    Intent intent = new Intent(mcontext, Category.class);
+                    intent.putExtra("cat", text[position]);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    mcontext.startActivity(intent);
+                }
             }
         });
         return convertView;
