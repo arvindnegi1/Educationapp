@@ -31,27 +31,29 @@ String text[];
         String temp=intent.getStringExtra("cat");
         tv.setText(temp);
         CustomAdapter2 customAdapter2 = null;
-        if(temp.equals("MATHS")||temp.equals("SCIENCE")) {
-            logo = new int[]{R.drawable.nine, R.drawable.ten, R.drawable.eleven, R.drawable.twelve, R.drawable.assignment};
-            text=new String[]{"CLASS 9","CLASS 10","CLASS 11","CLASS 12","ASSIGNMENT"};
-            customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
-        }
-        else if(temp.equals("ENGLISH")){
-            logo = new int[]{R.drawable.nine, R.drawable.ten, R.drawable.eleven, R.drawable.twelve, R.drawable.nda,R.drawable.force};
-            text=new String[]{"CLASS 9","CLASS 10","CLASS 11","CLASS 12","NDA","AFCAT"};
-            customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
-        }
-        else if(temp.equals("NDA"))
-        {
-            logo = new int[]{R.drawable.maths,R.drawable.assignment};
-            text=new String[]{"MATHS","GS"};
-            customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
-        }
-        else if(temp.equals("AFCAT"))
-        {
-            logo = new int[]{R.drawable.maths,R.drawable.testseries};
-            text=new String[]{"MATHS","EKT"};
-            customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
+        assert temp != null;
+        switch (temp) {
+            case "MATHS":
+            case "SCIENCE":
+                logo = new int[]{R.drawable.nine, R.drawable.ten, R.drawable.eleven, R.drawable.twelve, R.drawable.assignment};
+                text = new String[]{"CLASS 9", "CLASS 10", "CLASS 11", "CLASS 12", "ASSIGNMENT"};
+                customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
+                break;
+            case "ENGLISH":
+                logo = new int[]{R.drawable.nine, R.drawable.ten, R.drawable.eleven, R.drawable.twelve, R.drawable.nda, R.drawable.force};
+                text = new String[]{"CLASS 9", "CLASS 10", "CLASS 11", "CLASS 12", "NDA", "AFCAT"};
+                customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
+                break;
+            case "NDA":
+                logo = new int[]{R.drawable.maths, R.drawable.assignment};
+                text = new String[]{"MATHS", "GS"};
+                customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
+                break;
+            case "AFCAT":
+                logo = new int[]{R.drawable.maths, R.drawable.testseries};
+                text = new String[]{"MATHS", "EKT"};
+                customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
+                break;
         }
             goback.setOnClickListener(new View.OnClickListener() {
             @Override
