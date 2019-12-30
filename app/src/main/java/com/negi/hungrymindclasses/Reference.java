@@ -23,8 +23,10 @@ ProgressDialog pd;
         pd=new ProgressDialog(Reference.this);
         pd.setMessage("PLEASE WAIT LOADING");
         pd.show();
+        Intent intent=getIntent();
+        String indexurl=intent.getStringExtra("indexurl");
         webView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
-        webView.loadUrl("http://hungrymindclasses.com/category/math/");
+        webView.loadUrl(indexurl);
     }
     private class MyBrowser extends WebViewClient{
         @Override

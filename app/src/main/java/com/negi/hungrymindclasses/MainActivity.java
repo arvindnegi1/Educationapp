@@ -65,5 +65,6 @@ int logo[]={R.drawable.maths,R.drawable.science,R.drawable.english,R.drawable.ph
         {
             Toast.makeText(MainActivity.this,"YOUTUBE",Toast.LENGTH_SHORT).show();
         }
+
     }
 }

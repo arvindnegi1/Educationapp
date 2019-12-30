@@ -11,13 +11,15 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class Category extends AppCompatActivity {
 Toolbar tb;
 TextView tv;
 ImageView goback;
 GridView gridView;
-int logo[]={R.drawable.nine,R.drawable.ten,R.drawable.eleven,R.drawable.twelve,R.drawable.assignment};
-  String text[]={"CLASS 9","CLASS 10","CLASS 11","CLASS 12","ASSIGNMENT"};
+int logo[];
+String text[];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,14 +30,49 @@ int logo[]={R.drawable.nine,R.drawable.ten,R.drawable.eleven,R.drawable.twelve,R
         Intent intent=getIntent();
         String temp=intent.getStringExtra("cat");
         tv.setText(temp);
-        goback.setOnClickListener(new View.OnClickListener() {
+        CustomAdapter2 customAdapter2 = null;
+        if(temp.equals("MATHS")||temp.equals("SCIENCE")) {
+            logo = new int[]{R.drawable.nine, R.drawable.ten, R.drawable.eleven, R.drawable.twelve, R.drawable.assignment};
+            text=new String[]{"CLASS 9","CLASS 10","CLASS 11","CLASS 12","ASSIGNMENT"};
+            customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
+        }
+        else if(temp.equals("ENGLISH")){
+            logo = new int[]{R.drawable.nine, R.drawable.ten, R.drawable.eleven, R.drawable.twelve, R.drawable.nda,R.drawable.force};
+            text=new String[]{"CLASS 9","CLASS 10","CLASS 11","CLASS 12","NDA","AFCAT"};
+            customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
+        }
+        else if(temp.equals("PHYSICS"))
+        {
+            logo = new int[]{R.drawable.nine, R.drawable.ten, R.drawable.eleven, R.drawable.twelve, R.drawable.nda,R.drawable.force};
+            text=new String[]{"CLASS 9","CLASS 10","CLASS 11","CLASS 12","NDA","AFCAT"};
+            customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
+        }
+        else if(temp.equals("NDA"))
+        {
+            logo = new int[]{R.drawable.maths,R.drawable.assignment};
+            text=new String[]{"MATHS","GS"};
+            customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
+        }
+        else if(temp.equals("AFCAT"))
+        {
+            logo = new int[]{R.drawable.maths,R.drawable.testseries};
+            text=new String[]{"MATHS","EKT"};
+            customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
+        }
+        else if(temp.equals("TEST SERIES"))
+        {
+            logo = new int[]{R.drawable.maths,R.drawable.assignment};
+            text=new String[]{"MATHS","GS"};
+            customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
+        }
+            goback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Category.super.onBackPressed();
             }
         });
         gridView=findViewById(R.id.gridclass);
-        CustomAdapter2 customAdapter2=new CustomAdapter2(getApplicationContext(),logo,text,temp);
+        
         gridView.setAdapter(customAdapter2);
     }
 }

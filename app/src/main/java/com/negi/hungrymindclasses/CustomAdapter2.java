@@ -44,43 +44,176 @@ public class CustomAdapter2 extends BaseAdapter {
         convertView= LayoutInflater.from(mcontext).inflate(R.layout.custom_grid,null);
         ImageView img=convertView.findViewById(R.id.images);
         TextView tv=convertView.findViewById(R.id.subtext);
-        img.setImageResource(logo[position]);
-        tv.setText(text[position]);
+                img.setImageResource(logo[position]);
+                tv.setText(text[position]);
+        final Intent intent=new Intent(mcontext,Reference.class);
+                if(course.equals("PHYSICS"))
+                {
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.putExtra("indexurl","http://hungrymindclasses.com/category/physics/");
+                    mcontext.startActivity(intent);
+                }
+                else if(course.equals("TEST SERIES"))
+                {
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.putExtra("indexurl","http://hungrymindclasses.com/category/test-series/");
+                    mcontext.startActivity(intent);
+                }
+
         LinearLayout second=convertView.findViewById(R.id.category);
         second.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 switch (course)
                 {
-                    case "PHYSICS": switch (text[position])
+                    case "MATHS": switch (text[position])
                                     {
                                         case "CLASS 9":
-                                            Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
-                                            Intent intent=new Intent(mcontext,Reference.class);
+                                           // Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+
                                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                            intent.putExtra("indexurl","http://hungrymindclasses.com/category/math/9th/");
                                             mcontext.startActivity(intent);
                                             break;
                                         case "CLASS 10":
                                             Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                            intent.putExtra("indexurl","http://hungrymindclasses.com/category/math/10th/");
+                                            mcontext.startActivity(intent);
                                             break;
                                         case "CLASS 11":
                                             Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                            intent.putExtra("indexurl","http://hungrymindclasses.com/category/math/11/");
+                                            mcontext.startActivity(intent);
                                             break;
                                         case "CLASS 12":
                                             Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                            intent.putExtra("indexurl","http://hungrymindclasses.com/category/math/12th/");
+                                            mcontext.startActivity(intent);
                                             break;
                                         case "ASSIGNMENT":
                                             Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                            intent.putExtra("indexurl","http://hungrymindclasses.com/category/test-series/");
+                                            mcontext.startActivity(intent);
                                             break;
                                     }
                         break;
-                    case "MATHS":
+                    case "SCIENCE":switch (text[position])
+                    {
+                        case "CLASS 9":
+                            // Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtra("indexurl","http://hungrymindclasses.com/category/science/9th-science/");
+                            mcontext.startActivity(intent);
+                            break;
+                        case "CLASS 10":
+                            Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtra("indexurl","http://hungrymindclasses.com/category/science/10th-science/");
+                            mcontext.startActivity(intent);
+                            break;
+                        case "CLASS 11":
+                            Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtra("indexurl","http://hungrymindclasses.com/category/science/11th/");
+                            mcontext.startActivity(intent);
+                            break;
+                        case "CLASS 12":
+                            Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtra("indexurl","http://hungrymindclasses.com/category/science/12th-science/");
+                            mcontext.startActivity(intent);
+                            break;
+                        case "ASSIGNMENT":
+                            Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtra("indexurl","http://hungrymindclasses.com/category/test-series/");
+                            mcontext.startActivity(intent);
+                            break;
+                    }
                         break;
-                    case "ENGLISH":
+                    case "ENGLISH":switch (text[position])
+                    {
+                        case "CLASS 9":
+                            // Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtra("indexurl","http://hungrymindclasses.com/category/english/9th/");
+                            mcontext.startActivity(intent);
+                            break;
+                        case "CLASS 10":
+                            Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtra("indexurl","http://hungrymindclasses.com/category/english/10th/");
+                            mcontext.startActivity(intent);
+                            break;
+                        case "CLASS 11":
+                            Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtra("indexurl","http://hungrymindclasses.com/category/english/11th/");
+                            mcontext.startActivity(intent);
+                            break;
+                        case "CLASS 12":
+                            Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtra("indexurl","http://hungrymindclasses.com/category/english/12th/");
+                            mcontext.startActivity(intent);
+                            break;
+                        case "NDA":
+                            Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtra("indexurl","http://hungrymindclasses.com/category/english/nda/");
+                            mcontext.startActivity(intent);
+                            break;
+                        case "AFCAT":
+                            Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtra("indexurl","http://hungrymindclasses.com/category/english/afcat/");
+                            mcontext.startActivity(intent);
+                            break;
+                    }
                         break;
-                    case "AFCAT":
+                    case "AFCAT":switch (text[position]) {
+                        case "MATHS":
+                            // Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtra("indexurl", "http://hungrymindclasses.com/category/afcat/maths/");
+                            mcontext.startActivity(intent);
+                            break;
+                        case "EKT":
+                            Toast.makeText(mcontext, "" + course + text[position], Toast.LENGTH_SHORT).show();
+
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtra("indexurl", "http://hungrymindclasses.com/category/afcat/ekt");
+                            mcontext.startActivity(intent);
+                            break;
+                    }
+
                         break;
-                    case "NDA":
+                    case "NDA":switch (text[position]) {
+                        case "MATHS":
+                            // Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtra("indexurl", "http://hungrymindclasses.com/category/nda/maths");
+                            mcontext.startActivity(intent);
+                            break;
+                        case "GS":
+                            Toast.makeText(mcontext, "" + course + text[position], Toast.LENGTH_SHORT).show();
+
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtra("indexurl", "http://hungrymindclasses.com/category/nda/gs/");
+                            mcontext.startActivity(intent);
+                            break;
+                    }
                         break;
                 }
             }
