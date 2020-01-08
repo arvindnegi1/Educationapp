@@ -2,6 +2,8 @@ package com.negi.hungrymindclasses;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.media.Image;
@@ -17,9 +19,10 @@ public class Category extends AppCompatActivity {
 Toolbar tb;
 TextView tv;
 ImageView goback;
-GridView gridView;
+RecyclerView recyclerView;
 int logo[];
 String text[];
+int clr[];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,29 +33,23 @@ String text[];
         Intent intent=getIntent();
         String temp=intent.getStringExtra("cat");
         tv.setText(temp);
-        CustomAdapter2 customAdapter2 = null;
+       RecCategory recCategory=null;
         assert temp != null;
         switch (temp) {
             case "MATHS":
             case "SCIENCE":
                 logo = new int[]{R.drawable.nine, R.drawable.ten, R.drawable.eleven, R.drawable.twelve, R.drawable.assignment};
                 text = new String[]{"CLASS 9", "CLASS 10", "CLASS 11", "CLASS 12", "ASSIGNMENT"};
-                customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
+                clr=new int[]{R.color.light_green,R.color.lighterindigo,R.color.light_green,R.color.lighterindigo,R.color.light_green};
+                recCategory= new RecCategory(getApplicationContext(), logo, text, temp,clr);
                 break;
             case "ENGLISH":
-                logo = new int[]{R.drawable.nine, R.drawable.ten, R.drawable.eleven, R.drawable.twelve, R.drawable.nda, R.drawable.force};
-                text = new String[]{"CLASS 9", "CLASS 10", "CLASS 11", "CLASS 12", "NDA", "AFCAT"};
-                customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
+
                 break;
             case "NDA":
-                logo = new int[]{R.drawable.maths, R.drawable.assignment};
-                text = new String[]{"MATHS", "GS"};
-                customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
+
                 break;
             case "AFCAT":
-                logo = new int[]{R.drawable.maths, R.drawable.testseries};
-                text = new String[]{"MATHS", "EKT"};
-                customAdapter2 = new CustomAdapter2(getApplicationContext(), logo, text, temp);
                 break;
         }
             goback.setOnClickListener(new View.OnClickListener() {
@@ -61,8 +58,10 @@ String text[];
                 Category.super.onBackPressed();
             }
         });
-        gridView=findViewById(R.id.gridclass);
-        
-        gridView.setAdapter(customAdapter2);
+
+        recyclerView=findViewById(R.id.recv);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        recyclerView.setAdapter(recCategory);
     }
 }

@@ -13,10 +13,10 @@
     app:cardBackgroundColor="@color/skyblue"
     app:cardElevation="10sp">
     <ImageView
-        android:layout_width="match_parent"
+        android:layout_width="80sp"
         android:id="@+id/images"
         android:layout_height="140sp"
-        android:scaleType="fitXY"
+
         android:layout_gravity="center_horizontal"
         android:src="@drawable/hungrylogo"
         ></ImageView>
