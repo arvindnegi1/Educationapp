@@ -40,7 +40,7 @@ ProgressDialog pd;
 
         @Override
         public void doUpdateVisitedHistory(WebView view, String url, boolean isReload) {
-            if(url.equals("http://hungrymindclasses.com/")) {
+            if(url.equals("https://hungrymindclasses.com/")) {
                 Intent intent=new Intent(Reference.this, MainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 pd.dismiss();

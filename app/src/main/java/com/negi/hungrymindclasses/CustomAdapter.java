@@ -71,15 +71,14 @@ public class CustomAdapter extends BaseAdapter {
                 {
                    Intent intent=new Intent(mcontext,Reference.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.putExtra("indexurl","http://hungrymindclasses.com/category/physics/");
+                    intent.putExtra("indexurl","https://hungrymindclasses.com/category/physics/");
                     mcontext.startActivity(intent);
                 }
-                else if(text[position].equals("TEST SERIES"))
+                else if(text[position].equals("CHEMISTRY"))
                 {
-
-                   Intent intent=new Intent(mcontext,Reference.class);
+                    Intent intent=new Intent(mcontext,Reference.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.putExtra("indexurl","http://hungrymindclasses.com/category/test-series/");
+                    intent.putExtra("indexurl","https://hungrymindclasses.com/category/chemistry/");
                     mcontext.startActivity(intent);
                 }
                 else {

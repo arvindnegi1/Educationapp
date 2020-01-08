@@ -38,19 +38,21 @@ int clr[];
         switch (temp) {
             case "MATHS":
             case "SCIENCE":
-                logo = new int[]{R.drawable.six,R.drawable.seven,R.drawable.eight,R.drawable.nine, R.drawable.ten, R.drawable.eleven, R.drawable.twelve, R.drawable.assignment};
-                text = new String[]{"CLASS 6","CLASS 7","CLASS 8","CLASS 9", "CLASS 10", "CLASS 11", "CLASS 12", "ASSIGNMENT"};
-                clr=new int[]{R.color.l1,R.color.l2,R.color.l3,R.color.l4,R.color.light_green,R.color.l2,R.color.l3,R.color.l4};
+            case "ENGLISH":
+            case "TEST SERIES":
+                logo = new int[]{R.drawable.six,R.drawable.seven,R.drawable.eight,R.drawable.nine, R.drawable.ten, R.drawable.eleven, R.drawable.twelve};
+                text = new String[]{"CLASS 6","CLASS 7","CLASS 8","CLASS 9", "CLASS 10", "CLASS 11", "CLASS 12"};
+                clr=new int[]{R.color.l1,R.color.l2,R.color.l3,R.color.l4,R.color.light_green,R.color.l2,R.color.l3};
                 recCategory= new RecCategory(getApplicationContext(), logo, text, temp,clr);
                 break;
-            case "ENGLISH":
-
-                break;
-            case "NDA":
-
-                break;
             case "AFCAT":
+            case "NDA":logo = new int[]{R.drawable.maths,R.drawable.assignment,R.drawable.testseries,R.drawable.english};
+                text = new String[]{"MATHS","GS","OLD PAPER","ENGLISH"};
+                clr=new int[]{R.color.l1,R.color.l2,R.color.l3,R.color.l4};
+                recCategory= new RecCategory(getApplicationContext(), logo, text, temp,clr);
                 break;
+
+
         }
             goback.setOnClickListener(new View.OnClickListener() {
             @Override

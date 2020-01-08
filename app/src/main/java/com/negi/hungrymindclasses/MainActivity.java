@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 FloatingActionButton fab,fabfb,fabyt,fabtweet,fabinsta;
 int show=0;
 GridView subjects;
-int logo[]={R.drawable.maths,R.drawable.science,R.drawable.english,R.drawable.physics,R.drawable.nda,R.drawable.force,R.drawable.video,R.drawable.testseries};
-   String text[]={"MATHS","SCIENCE","ENGLISH","PHYSICS","NDA","AFCAT","VIDEO LECTURE","TEST SERIES"};
+int logo[]={R.drawable.maths,R.drawable.science,R.drawable.english,R.drawable.physics,R.drawable.beaker,R.drawable.nda,R.drawable.force,R.drawable.video,R.drawable.testseries};
+   String text[]={"MATHS","SCIENCE","ENGLISH","PHYSICS","CHEMISTRY","NDA","AFCAT","VIDEO LECTURE","TEST SERIES"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

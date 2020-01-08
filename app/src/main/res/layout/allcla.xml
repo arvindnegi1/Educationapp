@@ -10,6 +10,7 @@
     android:layout_height="120sp"
     app:cardCornerRadius="10sp"
     app:cardElevation="10sp"
+    android:id="@+id/cardla"
     android:elevation="8sp"
     android:padding="10sp"
     android:layout_margin="10sp">
