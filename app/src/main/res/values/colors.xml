@@ -12,4 +12,8 @@
     <color name="lighterindigo">#3C6478</color>
     <color name="snow">#FFFAFA</color>
     <color name="light_green">#CCFF99</color>
+    <color name="l1">#CCFF66</color>
+    <color name="l2">#FF3366</color>
+    <color name="l3">#FF9966</color>
+    <color name="l4">#FFFF66</color>
 </resources>
