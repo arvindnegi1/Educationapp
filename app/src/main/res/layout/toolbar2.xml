@@ -1,8 +1,22 @@
 <androidx.appcompat.widget.Toolbar android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+app:contentInsetStart="0sp"
     android:id="@+id/custool"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingRight="0sp"
+        android:paddingLeft="0sp"
+
+        android:layout_marginLeft="0dp"
+
+        android:layout_height="match_parent"
+        >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="80sp"
+    android:background="@color/light_green">
     <ImageView
         android:layout_width="40sp"
         android:id="@+id/back"
@@ -13,10 +27,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="CATEGORY"
-        android:id="@+id/texttop"
+        android:text="HUNGRY MIND CLASSES"
         android:textSize="22sp"
         android:textAllCaps="true"
         android:fontFamily="@font/grenze"
-        android:textColor="@color/orange"></TextView>
+        android:textColor="@color/orange"/>
+</LinearLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="230sp"
+            android:layout_height="70sp"
+            android:layout_marginTop="40sp"
+            app:cardElevation="10sp"
+            android:elevation="8sp"
+            android:backgroundTint="#FFFFCC"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:cardPreventCornerOverlap="false"
+            app:cardCornerRadius="5sp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginLeft="70sp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:text="CATEGORY"
+                android:fontFamily="@font/grenze"
+                android:id="@+id/texttop"
+                android:textSize="22sp"
+                android:textColor="@color/black"/>
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
 </androidx.appcompat.widget.Toolbar>
