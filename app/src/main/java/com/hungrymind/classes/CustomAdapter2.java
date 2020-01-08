@@ -1,9 +1,7 @@
-package com.negi.hungrymindclasses;
+package com.hungrymind.classes;
 
-import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

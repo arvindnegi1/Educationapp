@@ -1,4 +1,4 @@
-package com.negi.hungrymindclasses;
+package com.hungrymind.classes;
 
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -11,9 +11,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.cardview.widget.CardView;
 
 public class CustomAdapter extends BaseAdapter {
 

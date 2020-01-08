@@ -1,4 +1,4 @@
-package com.negi.hungrymindclasses;
+package com.hungrymind.classes;
 
 import android.content.Context;
 

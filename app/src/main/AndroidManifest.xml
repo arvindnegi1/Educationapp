@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.negi.hungrymindclasses">
+    package="com.hungrymind.classes">
 <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Reference"></activity>
-        <activity android:name=".Category" />
-        <activity android:name=".splashScreen">
+        <activity android:name="com.hungrymind.classes.Reference"></activity>
+        <activity android:name="com.hungrymind.classes.Category" />
+        <activity android:name="com.hungrymind.classes.splashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name="com.hungrymind.classes.MainActivity" />
     </application>
 
 </manifest>
