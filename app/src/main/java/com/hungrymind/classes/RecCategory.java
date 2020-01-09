@@ -153,6 +153,18 @@ public class RecCategory extends RecyclerView.Adapter<RecCategory.RecCategoryHol
                             intent.putExtra("indexurl","https://hungrymindclasses.com/category/science/12th-science/");
                             mcontext.startActivity(intent);
                             break;
+                            case "PHYSICS":
+                            Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtra("indexurl","https://hungrymindclasses.com/category/physics/");
+                            mcontext.startActivity(intent);
+                            break;
+                        case "CHEMISTRY":
+                            Toast.makeText(mcontext,""+course+text[position],Toast.LENGTH_SHORT).show();
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtra("indexurl","https://hungrymindclasses.com/category/chemistry/");
+                            mcontext.startActivity(intent);
+                            break;
                     }
                         break;
 

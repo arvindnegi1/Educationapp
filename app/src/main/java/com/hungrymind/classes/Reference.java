@@ -20,7 +20,7 @@ ProgressDialog pd;
         webView.setWebViewClient(new MyBrowser());
         webView.getSettings().setJavaScriptEnabled(true);
         pd=new ProgressDialog(Reference.this);
-        pd.setMessage("PLEASE WAIT LOADING");
+        pd.setMessage("Loding");
         pd.show();
         Intent intent=getIntent();
         String indexurl=intent.getStringExtra("indexurl");

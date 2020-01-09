@@ -33,12 +33,16 @@ int clr[];
         assert temp != null;
         switch (temp) {
             case "MATHS":
-            case "SCIENCE":
             case "ENGLISH":
             case "TEST SERIES":
                 logo = new int[]{R.drawable.six,R.drawable.seven,R.drawable.eight,R.drawable.nine, R.drawable.ten, R.drawable.eleven, R.drawable.twelve};
                 text = new String[]{"CLASS 6","CLASS 7","CLASS 8","CLASS 9", "CLASS 10", "CLASS 11", "CLASS 12"};
                 clr=new int[]{R.color.l1,R.color.l2,R.color.l3,R.color.l4,R.color.light_green,R.color.l2,R.color.l3};
+                recCategory= new RecCategory(getApplicationContext(), logo, text, temp,clr);
+                break;
+            case "SCIENCE":logo = new int[]{R.drawable.six,R.drawable.seven,R.drawable.eight,R.drawable.nine, R.drawable.ten, R.drawable.eleven, R.drawable.twelve,R.drawable.physics,R.drawable.beaker};
+                text = new String[]{"CLASS 6","CLASS 7","CLASS 8","CLASS 9", "CLASS 10", "CLASS 11", "CLASS 12","PHYSICS","CHEMISTRY"};
+                clr=new int[]{R.color.l1,R.color.l2,R.color.l3,R.color.l4,R.color.light_green,R.color.l2,R.color.l3,R.color.l3,R.color.l4};
                 recCategory= new RecCategory(getApplicationContext(), logo, text, temp,clr);
                 break;
             case "AFCAT":
